@@ -49,4 +49,6 @@ def upload():
         return render_template("index.html", predictions=predictions)
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    # Get the PORT from environment variables (Render uses dynamic ports)
+    port = int(os.environ.get("PORT", 10000))  # Default to 10000 if PORT is not set
+    app.run(host="0.0.0.0", port=port, debug=True)
