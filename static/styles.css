@@ -1,0 +1,91 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  color: aliceblue;
+  background-color: #000000;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg fill-opacity='0.72'%3E%3Cpolygon fill='%23220000' points='1600 160 0 460 0 350 1600 50'/%3E%3Cpolygon fill='%23440000' points='1600 260 0 560 0 450 1600 150'/%3E%3Cpolygon fill='%23660000' points='1600 360 0 660 0 550 1600 250'/%3E%3Cpolygon fill='%23880000' points='1600 460 0 760 0 650 1600 350'/%3E%3Cpolygon fill='%23A00' points='1600 800 0 800 0 750 1600 450'/%3E%3C/g%3E%3C/svg%3E");
+  background-attachment: fixed;
+  background-size: cover;
+  transition: background 0.3s, color 0.3s;
+}
+header {
+  padding: 20px;
+}
+button {
+  padding: 10px;
+  cursor: pointer;
+}
+table {
+  width: 80%;
+  margin: auto;
+  border-collapse: collapse;
+}
+th,
+td {
+  border: 1px solid black;
+  padding: 10px;
+}
+.secret-message {
+  font-size: 18px;
+  font-weight: bold;
+  color: #ff5733;
+}
+
+/* 
+.dark-mode {
+  background-color: #000000;
+  color: #ffffff;
+}
+ */
+
+ 
+/* Apply bluish highlight and shadow effect */
+.cards {
+  border: 1px solid white;
+  height: auto; /* Adjust height dynamically based on content */
+  padding: 20px;
+  margin: 20px auto; /* Centering */
+  border-radius: 20px;
+  background-color: #00034366; /* Bluish Background */
+  box-shadow: 15px 5px 20px 5px #fc000091; /* Shadow effect */
+  text-align: center;
+  overflow-x: auto; /* Ensures the table remains scrollable on small screens */
+}
+
+/* Table styling for better visibility */
+.cards table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.cards th,
+.cards td {
+  padding: 12px;
+  border: 1px solid white;
+  color: white;
+}
+
+
+
+/* Responsive: Adjusts table and makes it scrollable on small screens */
+@media (max-width: 768px) {
+  .cards {
+    overflow-x: auto;
+    padding: 10px;
+  }
+}
+
+.button {
+  border-radius: 20px;
+  height: 40px;
+  width: 166px;
+  font-size: 20px;
+  margin: 5px 22px;
+  font-weight: bold;
+  color: rgb(90, 15, 15);
+}
+
+button:hover {
+  background-color: rgb(199, 197, 197);
+  box-shadow: 20px 20px 100px 2px #403b3b84;
+}
