@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suggestions De Bhai</title>
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="../static/styles.css">
+</head>
+
+<body>
+    <header>
+        <h1 style="font-size: 50px;">Suggestions De Bhai</h1>
+        <p class="tagline">Exam Question Prediction Using Apriori Algorithm</p>
+        <!-- <button id="darkModeToggle">🌙 Dark Mode</button> -->
+    </header>
+
+    <main>
+        <form action="/upload" method="post" enctype="multipart/form-data">
+            <input type="file" name="file" accept=".xlsx" required>
+            <button type="submit">Upload & Predict</button>
+        </form>
+
+        <h2>Prediction Results</h2>
+
+        <!-- Apply the .cards class to the table wrapper -->
+        <div class="cards">
+            <table>
+                <thead>
+                    <tr>
+                        <th><h2>Question 1</h2></th>
+                        <th><h2>Question 2</h2></th>
+                        <th><h2>Chances of occurring together (%)</h2></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for row in predictions %}
+                    <tr>
+                        <td>{{ row[0] }}</td>
+                        <td>{{ row[1] }}</td>
+                        <td>{{ row[2] }}%</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+
+        <p class="secret-message" style="font-size: 30px;"> All the Best Bhaii !!! </p>
+    </main>
+
+
+    <footer>
+        <p>© Writabrata Chakraborti 2025</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+
+</html>
